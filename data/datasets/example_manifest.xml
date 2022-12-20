@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>{PACKAGE_ID}</identifier>
+  <version>{MOD_VERSION}</version>
+  <targetVersions>
+		{SUPPORTED_VERSIONS_LIST}
+  </targetVersions>
+  <dependencies>
+	  {MOD_DEPENDENCIES}
+  </dependencies>
+  <incompatibleWith>
+		{INCOMPATIBLE_LIST}
+  </incompatibleWith>
+  <loadBefore>
+		{LOAD_BEFORE_LIST}
+  </loadBefore>
+  <loadAfter>
+		{LOAD_AFTER_LIST}
+  </loadAfter>
+  <manifestUri>{GITHUB_MANIFEST_URL}</manifestUri>
+  <downloadUri>{GITHUB_LATEST_RELEASE}</downloadUri>
+</Manifest>

@@ -1,0 +1,6 @@
+<li>
+    <packageId>{PACKAGE_ID}</packageId>
+    <displayName>{DISPLAY_NAME}</displayName>
+    <steamWorkshopUrl>{STEAM_URL}</steamWorkshopUrl>
+    <downloadUrl>{GITHUB_LATEST_RELEASE}</downloadUrl>
+</li>

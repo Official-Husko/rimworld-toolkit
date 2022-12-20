@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <!--===== .45 ACP Bullet | Author: Husko =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>TLWWP_Bullet_45_ACP</defName>
+    <label>.45 ACP Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--===== 9mm Luger Bullet | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>TLWWP_9mm_Luger_Bullet</defName>
+    <label>9mm Luger Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--===== .44 Magnum Bullet | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>TLWWP_44_Magnum_Bullet</defName>
+    <label>.44 Magnum Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <armorPenetrationBase>0.17</armorPenetrationBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--===== 12ga Bullet | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>TLWWP_12ga_Bullet</defName>
+    <label>12ga Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <stoppingPower>4</stoppingPower>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--===== Volunteer Carbine | Author: Husko =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_Volunteer_Carbine</defName>
+    <label>Volunteer Carbine</label>
+    <description>A simple blow-back action in a stamped and welded upper receiver on a cast lower receiver, these Volunteer Carbine's were meant to be a lot of fun to shoot at the range or farm, and use 30-round M3 Grease Gun magazines instead of the more expensive Thompson mags.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Rifle/TLWWP_Volunteer_Carbine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>1.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_Bullet_45_ACP</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>30</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Spitfire Carbine | Author: Husko =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_Spitfire_Carbine</defName>
+    <label>Spitfire Carbine</label>
+    <description>A simple blow-back action in a stamped and welded upper receiver on a cast lower receiver, these Spitfire Carbine's were meant to be a lot of fun to shoot at the range or farm, and use 30-round M3 Grease Gun magazines instead of the more expensive Thompson mags.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/SMG/TLWWP_Spitfire_Carbine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.48</AccuracyShort>
+      <AccuracyMedium>0.28</AccuracyMedium>
+      <AccuracyLong>0.08</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_Bullet_45_ACP</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>30</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Thompson M1921 | Author: Husko =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_M1921_</defName>
+    <label>Thompson M1921</label>
+    <description>The Thompson, popularly nicknamed the "Tommy Gun", is an American submachine gun that was designed by John Talliaferro Thompson and produced by the Auto-Ordnance Corporation. Originally conceived during World War I as a portable machine gun to break the stalemate of trench warfare, the Thompson entered production in 1921 and was primarily marketed for law enforcement purposes.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/SMG/TLWWP_M1921</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_Bullet_45_ACP</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>40</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Thompson M1A1 | Author: Husko =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_M1A1_</defName>
+    <label>Thompson M1A1</label>
+    <description>The US M1 "Thompson" or US M1A1 "Thompson" was developed in early 1942 as a simplified and improved version of the US M1928A1 "Thompson" and declared as an official military ordinance in April 1942.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/SMG/TLWWP_M1A1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_Bullet_45_ACP</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>43</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>TLWWP_Thompson_M1A1_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Eagle Carbine | Author: Husko =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_Eagle_Carbine</defName>
+    <label>Eagle Carbine</label>
+    <description>These were produced between 1964 to 1968, when the Eagle Gun Company went bankrupt. All the designs, tooling, fixturing and assets were later sold to Phoenix Arms in the production of the "Spit Fire" carbine.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Rifle/TLWWP_Eagle_Carbine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_Bullet_45_ACP</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>43</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Glock 17 | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_Glock_17_</defName>
+    <label>Glock 17</label>
+    <description>Glock is a brand of polymer-framed, short recoil-operated, locked-breech semi-automatic pistols designed and produced by Austrian manufacturer Glock Ges.m.b.H. The firearm entered Austrian military and police service by 1982 after it was the top performer in reliability and safety tests.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Pistol/TLWWP_Glock_17</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+      <drawOffsetEast>(0.01, 0.0, 0.0)</drawOffsetEast>
+      <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+      <drawOffsetWest>(-0.01, 0.0, 0.0)</drawOffsetWest>
+    </graphicData>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.73</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.74</AccuracyMedium>
+      <AccuracyLong>0.38</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Chemfuel>15</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Plasteel>4</Plasteel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_9mm_Luger_Bullet</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>15</range>
+        <soundCast>TLWWP_Glock_17_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>5</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== Desert Eagle | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_Desert_Eagle</defName>
+    <label>Desert Eagle</label>
+    <description>The Desert Eagle (colloquially, sometimes Deagle) is a gas-operated, semi-automatic pistol known for chambering the .50 Action Express, the largest centerfire cartridge of any magazine-fed, self-loading pistol. Magnum Research Inc. (MRI) designed and developed the Desert Eagle, the design was further refined by (and was also manufactured by) Israel Military Industries (IMI), until 1995, when MRI shifted the manufacturing contract to Saco Defense, in Saco, Maine. In 1998, MRI moved manufacturing back to IMI, which later commercialized its small arms branch under the name Israel Weapon Industries. Since December 2009, the Desert Eagle Pistol has been produced in the United States at MRI's Pillager, Minnesota, facility. Kahr Arms acquired Magnum Research in 2010.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Pistol/TLWWP_Desert_Eagle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+      <drawOffsetEast>(0.01, 0.0, 0.0)</drawOffsetEast>
+      <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+      <drawOffsetWest>(-0.01, 0.0, 0.0)</drawOffsetWest>
+    </graphicData>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Chemfuel>15</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_44_Magnum_Bullet</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>15</range>
+        <soundCast>TLWWP_Desert_Eagle_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>5</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== 7.62x39mm Bullet =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>TLWWP_7_62x39_Bullet</defName>
+    <label>7.62x39 Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>6</stoppingPower>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--===== AK 47 | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_AK_47_</defName>
+    <label>AK 47</label>
+    <description>The AK-47, officially known as the Avtomat Kalashnikova (Russian: Автома́т Кала́шникова, lit. 'Kalashnikov's automatic rifle'; also known as the Kalashnikov or just AK), is a gas-operated assault rifle that is chambered for the 7.62×39mm cartridge. Developed in the Soviet Union by Russian small-arms designer Mikhail Kalashnikov, it is the originating firearm of the Kalashnikov (or "AK") family of rifles. After more than seven decades, the AK-47 model and its variants remain the most popular and widely used rifles in the world.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Rifle/TLWWP_AK_47</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+      <drawOffsetEast>(0.01, 0.0, 0.0)</drawOffsetEast>
+      <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+      <drawOffsetWest>(-0.01, 0.0, 0.0)</drawOffsetWest>
+    </graphicData>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.83</AccuracyTouch>
+      <AccuracyShort>0.79</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>60</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>55</Steel>
+      <Chemfuel>17</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_7_62x39_Bullet</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>65</range>
+        <soundCast>TLWWP_AK_47_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>5</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>Grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!--===== S4 Shotgun | Author: SillyBilly =====-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>TLWWP_S4_Shotgun</defName>
+    <label>S4 Shotgun</label>
+    <description>The S4 is a standard pump-action shotgun with a tube magazine that holds 4 rounds if Stock, 10 rounds if fully upgraded. There's really nothing special about it. The only futuristic feature is the ammunition counter on the side.</description>
+    <graphicData>
+      <texPath>Things/Weapon/Ranged/Shotgun/TLWWP_S4_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+      <drawOffsetNorth>(0.0, 0.0, 0.0)</drawOffsetNorth>
+      <drawOffsetEast>(0.01, 0.0, 0.0)</drawOffsetEast>
+      <drawOffsetSouth>(0.0, 0.0, 0.0)</drawOffsetSouth>
+      <drawOffsetWest>(-0.01, 0.0, 0.0)</drawOffsetWest>
+    </graphicData>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.87</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.84</AccuracyMedium>
+      <AccuracyLong>0.58</AccuracyLong>
+      <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Chemfuel>10</Chemfuel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TLWWP_12ga_Bullet</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>20</range>
+        <soundCast>TLWWP_S4_Shotgun_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <MuzzleFlashScale>9</MuzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+  </ThingDef>
+
+</Defs>

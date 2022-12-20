@@ -1,0 +1,17 @@
+{
+    "about": {
+        "PROJECT_NAME": "LONE WOLF WEAPON PACKAGE",
+        "AUTHOR": "",
+        "GITHUB": "",
+        "SUPPORTED_VERSIONS_LIST": [],
+        "PACKAGE_ID": "oh.lwwp.base"
+    },
+    "weapons_ranged": {
+        "1": {
+            "internal_name": "lwwp.ar15",
+            "other_data": "continues here"
+        },
+        "2": {},
+        "3": {}
+    }
+}

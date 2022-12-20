@@ -7,5 +7,8 @@ Milestones:
     Version 0.0.1-dev2:
         [ ] Python Basic Server Setup
 
+    Version 0.0.1-dev3:
+        [ ] Load and write about.xml
+
     Version 0.1.0:
-        [ ] Weapons Maker System
+        [ ] Weapons System

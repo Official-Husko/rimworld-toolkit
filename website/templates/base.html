@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='wolf-awesome.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" type="image/x-icon" color>
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %}
+            {% for category, message in messages %}
+                {% if category == "error" %}
+
+                <div class="toast" id="toast">
+                    <div class="toast-content">
+            
+                        <div class="close-btn">
+                            <a class="wa-close icon-pos" id="close-btn"></a>
+                        </div>
+            
+                        <div class="message">            
+                            <div class="text-content">
+                                <p class="text text-1" id="txt-hide">Error</p>
+                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+                {% elif category == "success" %}
+
+                <div class="toast" id="toast">
+                    <div class="toast-content success">
+            
+                        <div class="close-btn">
+                            <a class="wa-close icon-pos" id="close-btn"></a>
+                        </div>
+            
+                        <div class="message">            
+                            <div class="text-content">
+                                <p class="text text-success" id="txt-hide">Success</p>
+                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+                {% elif category == "info" %}
+
+                <div class="toast" id="toast">
+                    <div class="toast-content info">
+            
+                        <div class="close-btn">
+                            <a class="wa-close icon-pos" id="close-btn"></a>
+                        </div>
+            
+                        <div class="message">            
+                            <div class="text-content">
+                                <p class="text text-info" id="txt-hide">Info</p>
+                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+                
+                {% else: %}
+
+                <div class="toast" id="toast">
+                    <div class="toast-content unknown">
+            
+                        <div class="close-btn">
+                            <a class="wa-close icon-pos" id="close-btn"></a>
+                        </div>
+            
+                        <div class="message">            
+                            <div class="text-content">
+                                <p class="text text-unknown" id="txt-hide">Unknown Error</p>
+                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+                
+                {% endif %}
+            {% endfor %} 
+        {% endif %} 
+    {% endwith %} 
+    {% block content %}{% endblock%}
+
+    <nav class="navbar-container">
+        <div class="navbar"></div>
+    </nav>
+
+    <div class="sidebar scroller">
+      <div class="sidebar-container">
+        <div id="image-container">
+          <img src="./icon/Asset 2.png" class="logo" alt="Lone Wolf Logo" />
+        </div>
+
+        <div class="side-border">
+          <div class="box files-box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+
+        <div class="side-border">
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+
+    <main></main>
+
+    <!-- Toast -->
+    
+    <script>
+        const closeBtn = document.getElementById('close-btn');
+        const toast = document.getElementById("toast");
+
+
+
+        closeBtn.addEventListener('click', () => {
+            toast.parentNode.removeChild(toast);
+        });
+
+        setTimeout(function() {
+            toast.parentNode.removeChild(toast);
+        }, 5000);
+    </script>
+    
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+  </body>
+</html>
