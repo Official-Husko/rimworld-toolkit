@@ -11,6 +11,14 @@
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
+    <style>
+      body {
+        background-color: var(--main-color);
+        overflow: hidden;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../static/backgrounds/{{ session["background"] }}");
+        background-size: cover;
+      }
+  </style>
 
     {% with messages = get_flashed_messages(with_categories=true) %} 
         {% if messages %}
@@ -95,7 +103,6 @@
             {% endfor %} 
         {% endif %} 
     {% endwith %} 
-    {% block content %}{% endblock%}
 
     <nav class="navbar-container">
         <div class="navbar"></div>
@@ -104,55 +111,20 @@
     <div class="sidebar scroller">
       <div class="sidebar-container">
         <div id="image-container">
-          <img src="./icon/Asset 2.png" class="logo" alt="Lone Wolf Logo" />
+          <img src="{{ url_for('static', filename='icon.png') }}" class="logo" alt="Lone Wolf Logo" />
         </div>
-
         <div class="side-border">
           <div class="box files-box"></div>
         </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
-
         <div class="side-border">
           <div class="box"></div>
         </div>
       </div>
     </div>
 
-    <main></main>
+    {% block content %}{% endblock%}
 
     <!-- Toast -->
-    
     <script>
         const closeBtn = document.getElementById('close-btn');
         const toast = document.getElementById("toast");
