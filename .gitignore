@@ -1,0 +1,4 @@
+settings.json
+website/__pycache__/__init__.cpython-310.pyc
+website/__pycache__/logger.cpython-310.pyc
+website/__pycache__/views.cpython-310.pyc

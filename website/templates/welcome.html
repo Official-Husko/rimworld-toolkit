@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Welcome{% endblock %} {% block content %}
+<main class="welcome-main-content">
+  <div class="welcome-content">
+    <div class="welcome-box">
+      <div class="welcome-button-box">
+        <div class="centered-buttons">
+          <p class="welcome-text">Welcome {{ session["default_author"] }}</p>
+          <button type="submit" class="welcome-buttons">New Project</button>
+          <button type="submit" class="welcome-buttons">Load Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
