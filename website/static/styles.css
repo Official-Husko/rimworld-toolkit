@@ -5,6 +5,8 @@
   --navbar-sidebar: #252526;
   --main-color: #1e1e1e;
   --sidebar-boxes: #2d2d30;
+  --max-width: 1070px;
+  --fixed-width: 1070px;
 }
 
 * {
@@ -338,4 +340,200 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.2px);
   -webkit-backdrop-filter: blur(7.2px);
+}
+
+/* Projects Page */
+
+.accordion-structure {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  width: 96%;
+  height: 94%;
+}
+
+.accordion-content {
+  overflow-y: scroll;
+  height: 100%;
+  margin-right: 35px;
+}
+
+.accordion {
+  width: 85%;
+  margin: 45px auto 70px auto;
+}
+
+.accordion li {
+  color: #fff;
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background: rgba(45, 45, 48, 0.57);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+}
+
+.accordion li label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  overflow: hidden;
+  color: #fff;
+  max-height: 0;
+  padding: 0 10px;
+  line-height: 26px;
+  transition: max-height 0.5s, padding 0.5s;
+  -webkit-transition: max-height 0.5s, padding 0.5s;
+  -moz-transition: max-height 0.5s, padding 0.5s;
+  -ms-transition: max-height 0.5s, padding 0.5s;
+  -o-transition: max-height 0.5s, padding 0.5s;
+}
+
+.content {
+  height: 100vh;
+}
+
+.content .project-paragraphs {
+  overflow-y: auto;
+  height: 100%;
+  padding-top: 15px;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 590px;
+  padding: 10px 10px 20px;
+  margin-top: 7px;
+  border-top: 2px solid gray;
+}
+
+.project-small-text {
+  font-style: italic;
+  color: #6b6b6b;
+  margin-left: 7px;
+  font-size: 11px;
+}
+
+.project-github-info-label {
+  margin-left: 150px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.div1 {
+  overflow-y: auto;
+  border-right: 2px solid gray;
+  padding: 15px 15px 0px 0px;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+  overflow-y: auto;
+  border-right: 2px solid gray;
+  padding: 15px 0px 0px 0px;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+  overflow-y: auto;
+  padding: 15px 0px 0px 15px;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.inlined {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.github-info-inputs {
+  color: #fff;
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: rgba(45, 45, 48, 0.57);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+}
+
+.project-save-button {
+  cursor: pointer;
+  position: fixed;
+  top: 92%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  background: rgba(10, 87, 52, 0.57);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+}
+
+.project-save-button:hover {
+  background-color: #0c7c49;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 1366px) and (max-height: 768px) {
+  .accordion input[type="radio"]:checked + label + .content {
+    max-height: 358px;
+  }
+
+  .project-save-button {
+    top: 89%;
+    right: 2.3%;
+  }
 }
