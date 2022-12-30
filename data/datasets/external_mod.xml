@@ -1,0 +1,6 @@
+<li>
+    <packageId>{EXTERNAL_PACKAGE_ID}</packageId>
+    <displayName>{EXTERNAL_DISPLAY_NAME}</displayName>
+    <steamWorkshopUrl>{EXTERNAL_STEAM_URL}</steamWorkshopUrl>
+    <downloadUrl>{EXTERNAL_GITHUB_LATEST_RELEASE}</downloadUrl>
+</li>

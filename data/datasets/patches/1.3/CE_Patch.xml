@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+		<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+                
+                <!--===== Volunteer Carbine | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_Volunteer_Carbine"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                          <defName>TLWWP_Volunteer_Carbine</defName>
+                          <label>Volunteer Carbine</label>
+                          <description>A simple blow-back action in a stamped and welded upper receiver on a cast lower receiver, these Volunteer Carbine's were meant to be a lot of fun to shoot at the range or farm, and use 30-round M3 Grease Gun magazines instead of the more expensive Thompson mags.</description>
+                          <graphicData>
+                            <texPath>Things/Weapon/Ranged/Rifle/TLWWP_Volunteer_Carbine</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.87</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.7</SightsEfficiency>
+                              <ShotSpread>0.16</ShotSpread>
+                              <SwayFactor>1.07</SwayFactor>
+                              <Bulk>3.2</Bulk>
+                              <WorkToMake>7500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>25</Steel>
+                            <ComponentIndustrial>3</ComponentIndustrial>
+                            <WoodLog>15</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.6</warmupTime>
+                              <range>16</range>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>4</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>FALSE</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+
+                <!--===== Spitfire Carbine | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_Spitfire_Carbine"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                          <defName>TLWWP_Spitfire_Carbine</defName>
+                          <label>Spitfire Carbine</label>
+                          <description>A simple blow-back action in a stamped and welded upper receiver on a cast lower receiver, these Spitfire Carbine's were meant to be a lot of fun to shoot at the range or farm, and use 30-round M3 Grease Gun magazines instead of the more expensive Thompson mags.</description>
+                          <graphicData>
+                            <texPath>Things/Weapon/Ranged/SMG/TLWWP_Spitfire_Carbine</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.87</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.7</SightsEfficiency>
+                              <ShotSpread>0.16</ShotSpread>
+                              <SwayFactor>1.07</SwayFactor>
+                              <Bulk>3.2</Bulk>
+                              <WorkToMake>7650</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>25</Steel>
+                            <ComponentIndustrial>3</ComponentIndustrial>
+                            <WoodLog>15</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.6</warmupTime>
+                              <range>16</range>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>4</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>FALSE</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+
+                <!--===== Thompson M1921 | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_M1921_"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_M1921_</defName>
+                        <label>Thompson M1921</label>
+                        <description>The Thompson, popularly nicknamed the "Tommy Gun", is an American submachine gun that was designed by John Talliaferro Thompson and produced by the Auto-Ordnance Corporation. Originally conceived during World War I as a portable machine gun to break the stalemate of trench warfare, the Thompson entered production in 1921 and was primarily marketed for law enforcement purposes.</description>
+                          <graphicData>
+                            <texPath>Things/Weapon/Ranged/SMG/TLWWP_M1921</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.87</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.8</SightsEfficiency>
+                              <ShotSpread>0.30</ShotSpread>
+                              <SwayFactor>0.89</SwayFactor>
+                              <Bulk>4.7</Bulk>
+                              <WorkToMake>9500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>30</Steel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <WoodLog>40</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>40</range>
+                              <burstShotCount>6</burstShotCount>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>6</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>TRUE</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+              
+                <!--===== Thompson M1A1 | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_M1A1_"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_M1A1_</defName>
+                        <label>Thompson M1A1</label>
+                        <description>The US M1 "Thompson" or US M1A1 "Thompson" was developed in early 1942 as a simplified and improved version of the US M1928A1 "Thompson" and declared as an official military ordinance in April 1942.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/SMG/TLWWP_M1A1</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.8</SightsEfficiency>
+                              <ShotSpread>0.30</ShotSpread>
+                              <SwayFactor>0.89</SwayFactor>
+                              <Bulk>4.7</Bulk>
+                              <WorkToMake>9500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>30</Steel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <WoodLog>40</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>40</range>
+                              <burstShotCount>6</burstShotCount>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>6</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>TRUE</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== Eagle Carbine | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_Eagle_Carbine"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_Eagle_Carbine</defName>
+                        <label>Eagle Carbine</label>
+                        <description>These were produced between 1964 to 1968, when the Eagle Gun Company went bankrupt. All the designs, tooling, fixturing and assets were later sold to Phoenix Arms in the production of the "Spit Fire" carbine.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/Rifle/TLWWP_Eagle_Carbine</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.88</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.8</SightsEfficiency>
+                              <ShotSpread>0.32</ShotSpread>
+                              <SwayFactor>0.96</SwayFactor>
+                              <Bulk>4.7</Bulk>
+                              <WorkToMake>9500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>30</Steel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <WoodLog>40</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>40</range>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>6</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>False</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== Thompson M1A1 | Author: Husko =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_M1A1_"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_M1A1_</defName>
+                        <label>Thompson M1A1</label>
+                        <description>The US M1 "Thompson" or US M1A1 "Thompson" was developed in early 1942 as a simplified and improved version of the US M1928A1 "Thompson" and declared as an official military ordinance in April 1942.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/SMG/TLWWP_M1A1</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.8</SightsEfficiency>
+                              <ShotSpread>0.30</ShotSpread>
+                              <SwayFactor>0.89</SwayFactor>
+                              <Bulk>4.7</Bulk>
+                              <WorkToMake>9500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>30</Steel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <WoodLog>40</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                              <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                          </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>40</range>
+                              <burstShotCount>6</burstShotCount>
+                              <soundCast>TLWWP_Thompson_Carbine_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>6</reloadTime>
+                              <ammoSet>AmmoSet_45ACP</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>TRUE</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== Glock 17 | Author: SillyBilly =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_Glock_17_"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_Glock_17_</defName>
+                        <label>Glock 17</label>
+                        <description>Glock is a brand of polymer-framed, short recoil-operated, locked-breech semi-automatic pistols designed and produced by Austrian manufacturer Glock Ges.m.b.H. The firearm entered Austrian military and police service by 1982 after it was the top performer in reliability and safety tests.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/Pistol/TLWWP_Glock_17</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Autopistol</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.6</SightsEfficiency>
+                              <ShotSpread>0.36</ShotSpread>
+                              <SwayFactor>0.65</SwayFactor>
+                              <Bulk>2.7</Bulk>
+                              <WorkToMake>9500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>30</Steel>
+                            <Chemfuel>15</Chemfuel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <Plasteel>4</Plasteel>
+                          </costList>
+                          <recipeMaker>
+                            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                        </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>27</range>
+                              <burstShotCount>8</burstShotCount>
+                              <soundCast>TLWWP_Glock_17_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>17</magazineSize>
+                              <reloadTime>3</reloadTime>
+                              <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>False</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Barrel</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>4</power>
+                              <cooldownTime>1.54</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== Desert Eagle | Author: SillyBilly =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_Desert_Eagle"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_Desert_Eagle</defName>
+                        <label>Desert Eagle</label>
+                        <description>The Desert Eagle (colloquially, sometimes Deagle) is a gas-operated, semi-automatic pistol known for chambering the .50 Action Express, the largest centerfire cartridge of any magazine-fed, self-loading pistol. Magnum Research Inc. (MRI) designed and developed the Desert Eagle, the design was further refined by (and was also manufactured by) Israel Military Industries (IMI), until 1995, when MRI shifted the manufacturing contract to Saco Defense, in Saco, Maine. In 1998, MRI moved manufacturing back to IMI, which later commercialized its small arms branch under the name Israel Weapon Industries. Since December 2009, the Desert Eagle Pistol has been produced in the United States at MRI's Pillager, Minnesota, facility. Kahr Arms acquired Magnum Research in 2010.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/Pistol/TLWWP_Desert_Eagle</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Autopistol</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.6</SightsEfficiency>
+                              <ShotSpread>0.36</ShotSpread>
+                              <SwayFactor>0.65</SwayFactor>
+                              <Bulk>3.7</Bulk>
+                              <WorkToMake>12500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>45</Steel>
+                            <Chemfuel>20</Chemfuel>
+                            <ComponentIndustrial>4</ComponentIndustrial>
+                            <Plasteel>6</Plasteel>
+                          </costList>
+                          <recipeMaker>
+                            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                        </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_50AE_FMJ</defaultProjectile>
+                              <warmupTime>0.5</warmupTime>
+                              <range>55</range>
+                              <soundCast>TLWWP_Desert_Eagle_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>7</magazineSize>
+                              <reloadTime>3</reloadTime>
+                              <ammoSet>AmmoSet_50AE</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>False</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Barrel</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>6</power>
+                              <cooldownTime>1.73</cooldownTime>
+                              <armorPenetrationBlunt>0.575</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.64</cooldownTime>
+                              <chanceFactor>1.4</chanceFactor>
+                              <armorPenetrationBlunt>0.575</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== AK 47 | Author: SillyBilly =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_AK_47_"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_AK_47_</defName>
+                        <label>AK 47</label>
+                        <description>The AK-47, officially known as the Avtomat Kalashnikova (Russian: Автома́т Кала́шникова, lit. 'Kalashnikov's automatic rifle'; also known as the Kalashnikov or just AK), is a gas-operated assault rifle that is chambered for the 7.62×39mm cartridge. Developed in the Soviet Union by Russian small-arms designer Mikhail Kalashnikov, it is the originating firearm of the Kalashnikov (or "AK") family of rifles. After more than seven decades, the AK-47 model and its variants remain the most popular and widely used rifles in the world.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/Rifle/TLWWP_AK_47</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.6</SightsEfficiency>
+                              <ShotSpread>0.36</ShotSpread>
+                              <SwayFactor>0.65</SwayFactor>
+                              <Bulk>2.7</Bulk>
+                              <WorkToMake>20500</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>55</Steel>
+                            <Chemfuel>17</Chemfuel>
+                            <ComponentIndustrial>3</ComponentIndustrial>
+                            <Plasteel>4</Plasteel>
+                            <WoodLog>15</WoodLog>
+                          </costList>
+                          <recipeMaker>
+                            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                        </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_762x39mmSoviet_FMJ</defaultProjectile>
+                              <warmupTime>0.7</warmupTime>
+                              <range>70</range>
+                              <burstShotCount>6</burstShotCount>
+                              <soundCast>TLWWP_AK_47_Shot</soundCast>
+                              <soundCastTail>GunTail_Heavy</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>30</magazineSize>
+                              <reloadTime>5</reloadTime>
+                              <ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>False</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>8</power>
+                              <cooldownTime>1.55</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Barrel</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>2.02</cooldownTime>
+                              <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>8</power>
+                              <cooldownTime>1.55</cooldownTime>
+                              <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.64</cooldownTime>
+                              <chanceFactor>1.4</chanceFactor>
+                              <armorPenetrationBlunt>0.575</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+                <!--===== S4 Shotgun | Author: SillyBilly =====-->
+                <li Class="PatchOperationReplace">
+                  <xpath>
+                    Defs/ThingDef[defName="TLWWP_S4_Shotgun"]
+                  </xpath>
+                  <value>
+                      <ThingDef ParentName="BaseHumanMakeableGun">
+                        <defName>TLWWP_S4_Shotgun</defName>
+                        <label>S4 Shotgun</label>
+                        <description>The S4 is a standard pump-action shotgun with a tube magazine that holds 4 rounds if Stock, 10 rounds if fully upgraded. There's really nothing special about it. The only futuristic feature is the ammunition counter on the side.</description>
+                        <graphicData>
+                          <texPath>Things/Weapon/Ranged/Shotgun/TLWWP_S4_Shotgun</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          </graphicData>
+                          <soundInteract>Interact_Rifle</soundInteract>
+                          <statBases>
+                              <Mass>0.98</Mass>
+                              <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+                              <SightsEfficiency>0.5</SightsEfficiency>
+                              <ShotSpread>0.53</ShotSpread>
+                              <SwayFactor>0.49</SwayFactor>
+                              <Bulk>4.7</Bulk>
+                              <WorkToMake>18750</WorkToMake>
+                          </statBases>
+                          <costList>
+                            <Steel>40</Steel>
+                            <Chemfuel>13</Chemfuel>
+                            <ComponentIndustrial>2</ComponentIndustrial>
+                            <Plasteel>10</Plasteel>
+                          </costList>
+                          <recipeMaker>
+                            <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                        </recipeMaker>
+                          <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                              <hasStandardCommand>true</hasStandardCommand>
+                              <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                              <warmupTime>0.6</warmupTime>
+                              <range>20</range>
+                              <soundCast>TLWWP_S4_Shotgun_Shot</soundCast>
+                              <soundCastTail>GunTail_Light</soundCastTail>
+                              <MuzzleFlashScale>9</MuzzleFlashScale>
+                            </li>
+                          </verbs>
+                          <comps>
+                            <li Class="CombatExtended.CompProperties_AmmoUser">
+                              <magazineSize>6</magazineSize>
+                              <reloadTime>6</reloadTime>
+                              <ammoSet>AmmoSet_12Gauge</ammoSet>
+                            </li>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                              <aiUseBurstMode>False</aiUseBurstMode>
+                            </li>
+                          </comps>
+                          <weaponTags>
+                            <li>CE_Sidearm</li>
+                            <li>CE_OneHandedWeapon</li>
+                            <li>SimpleGun</li>
+                          </weaponTags>
+                          <tools>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Stock</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>8</power>
+                              <cooldownTime>1.55</cooldownTime>
+                              <chanceFactor>1.5</chanceFactor>
+                              <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Barrel</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>2.02</cooldownTime>
+                              <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Muzzle</label>
+                              <capacities>
+                                <li>Poke</li>
+                              </capacities>
+                              <power>8</power>
+                              <cooldownTime>1.55</cooldownTime>
+                              <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                              <label>Grip</label>
+                              <capacities>
+                                <li>Blunt</li>
+                              </capacities>
+                              <power>5</power>
+                              <cooldownTime>1.64</cooldownTime>
+                              <chanceFactor>1.4</chanceFactor>
+                              <armorPenetrationBlunt>0.575</armorPenetrationBlunt>
+                              <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                          </tools>
+                      </ThingDef>
+                  </value>
+              </li>
+			</operations>
+		</match>
+    </Operation>
+</Patch>

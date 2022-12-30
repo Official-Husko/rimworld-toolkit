@@ -20,90 +20,6 @@
       }
   </style>
 
-    {% with messages = get_flashed_messages(with_categories=true) %} 
-        {% if messages %}
-            {% for category, message in messages %}
-                {% if category == "error" %}
-
-                <div class="toast" id="toast">
-                    <div class="toast-content">
-            
-                        <div class="close-btn">
-                            <a class="wa-close icon-pos" id="close-btn"></a>
-                        </div>
-            
-                        <div class="message">            
-                            <div class="text-content">
-                                <p class="text text-1" id="txt-hide">Error</p>
-                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-
-                {% elif category == "success" %}
-
-                <div class="toast" id="toast">
-                    <div class="toast-content success">
-            
-                        <div class="close-btn">
-                            <a class="wa-close icon-pos" id="close-btn"></a>
-                        </div>
-            
-                        <div class="message">            
-                            <div class="text-content">
-                                <p class="text text-success" id="txt-hide">Success</p>
-                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-
-                {% elif category == "info" %}
-
-                <div class="toast" id="toast">
-                    <div class="toast-content info">
-            
-                        <div class="close-btn">
-                            <a class="wa-close icon-pos" id="close-btn"></a>
-                        </div>
-            
-                        <div class="message">            
-                            <div class="text-content">
-                                <p class="text text-info" id="txt-hide">Info</p>
-                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-                
-                {% else: %}
-
-                <div class="toast" id="toast">
-                    <div class="toast-content unknown">
-            
-                        <div class="close-btn">
-                            <a class="wa-close icon-pos" id="close-btn"></a>
-                        </div>
-            
-                        <div class="message">            
-                            <div class="text-content">
-                                <p class="text text-unknown" id="txt-hide">Unknown Error</p>
-                                <span class="text text-2" id="txt-hide-2">{{ message }}</span>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-                
-                {% endif %}
-            {% endfor %} 
-        {% endif %} 
-    {% endwith %} 
-
     <nav class="navbar-container">
         <div class="navbar"></div>
     </nav>
@@ -113,32 +29,15 @@
         <div id="image-container">
           <img src="{{ url_for('static', filename='icon.png') }}" class="logo" alt="Lone Wolf Logo" />
         </div>
+
         <div class="side-border">
           <div class="box files-box"></div>
         </div>
-        <div class="side-border">
-          <div class="box"></div>
-        </div>
+
       </div>
     </div>
 
     {% block content %}{% endblock%}
-
-    <!-- Toast -->
-    <script>
-        const closeBtn = document.getElementById('close-btn');
-        const toast = document.getElementById("toast");
-
-
-
-        closeBtn.addEventListener('click', () => {
-            toast.parentNode.removeChild(toast);
-        });
-
-        setTimeout(function() {
-            toast.parentNode.removeChild(toast);
-        }, 5000);
-    </script>
     
     <script src="{{url_for('static', filename='main.js')}}"></script>
   </body>

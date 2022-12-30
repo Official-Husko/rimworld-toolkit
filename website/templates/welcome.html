@@ -4,9 +4,9 @@
     <div class="welcome-box">
       <div class="welcome-button-box">
         <div class="centered-buttons">
-          <p class="welcome-text">Welcome {{ session["default_author"] }}</p>
-          <button type="submit" class="welcome-buttons">New Project</button>
-          <button type="submit" class="welcome-buttons">Load Project</button>
+          <p class="welcome-text">{{ session["language_str"]["WELCOME"] }} {{ session["default_author"] }}</p>
+          <button type="submit" class="welcome-buttons">{{ session["language_str"]["NEW_PROJECT"] }}</button>
+          <button disabled type="submit" class="welcome-buttons">{{ session["language_str"]["LOAD_PROJECT"] }}</button>
         </div>
       </div>
     </div>

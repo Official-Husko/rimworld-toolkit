@@ -14,12 +14,18 @@ def blank():
     if os.path.exists("settings.json"):
         with open("settings.json", "r") as settings:
             user_settings = json.load(settings)
-            session["default_author"] = user_settings["default_author"]
-            session["default_author_short"] = user_settings["default_author_short"]
-            session["language"] = user_settings["language"]
-            session["default_github"] = user_settings["default_github"]
-            session["versions"] = user_settings["versions"]
-            print(session["versions"])
+            session["settings"] = user_settings
+            
+        try:
+            with open(f"data/languages/{session['language']}.json") as language:
+                language_strings = json.load(language)
+                session["language_str"] = language_strings
+                # TODO: Merge english and foreign languages incase of missing translation
+        except:
+            with open(f"data/languages/en.json") as language:
+                language_strings = json.load(language)
+                session["language_str"] = language_strings
+                # TODO: Merge english and foreign languages incase of missing translation
         return redirect(url_for("views.welcome"))
     else:
         return redirect(url_for("views.setup"))
@@ -38,36 +44,45 @@ def setup():
         }
         settings = open("settings.json", "w")
         json.dump(data_example, settings, indent=6)
-        flash("Setup Completed!", category="success")
-        sleep(3)
         return redirect(url_for("views.welcome"))
     
     return render_template("setup.html")
 
 @views.route("/welcome")
 def welcome():
-    session["background"] = background
     try:
-        session["default_author"]
+        session["settings"]["default_author"]
     except:
         return redirect(url_for("views.blank"))
     # TODO: Show all found projects or just a simple welcome
+    print(session)
     return render_template("welcome.html")
 
 @views.route("/project", methods=["GET", "POST"])
 def project():
-    session["background"] = background
+    try:
+        session["settings"]["default_author"]
+    except:
+        return redirect(url_for("views.blank"))
+    # TODO: Show all found projects or just a simple welcome
+    print(session)
     return render_template("project.html")
 
 @views.route("/export", methods=["GET", "POST"])
 def export():
-    session["background"] = background
     return render_template("export.html")
 
 @views.route("/settings", methods=["GET", "POST"])
 def settings():
-    session["background"] = background
     if request.method == "POST":
         # TODO: Change or show settings in settings.json
         pass
     return render_template("settings.html")
+
+@views.route("/autosave", methods=["GET", "POST"])
+def autosave():
+    if request.method == "POST":
+        # TODO: save to file
+        pass
+    # TODO: Return data if GET
+    return print("Jesus how did you even manage to hit this endpoint")
