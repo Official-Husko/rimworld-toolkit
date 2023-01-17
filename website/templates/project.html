@@ -1,58 +1,37 @@
-{% extends "base.html" %} {% block title %}Project{% endblock %} {% block content %}
-<div class="accordion-structure">
-  <div class="accordion-content">
-    <div class="accordions-height">
-      <ul class="accordion">
-        {% for item in items %}
-        <li class="second-accordion">
-          <input type="radio" name="accordion" id="1" />
-          <label for="second" class="project-github-info-label">GitHub Info<span class="project-small-text">()</span>
-          </label>
+{% extends "base.html" %} {% block title %}Project{% endblock %} {% block
+content %}
 
-          <div class="content">
-            <div class="parent">
-              <div class="div1">
-                <div class="project-name inlined">
-                  <p class="name-paragraphs">Project Name</p>
-                  <input
-                    type="text"
-                    name="project-name"
-                    class="github-info-inputs"
-                    placeholder="Lone Wolf Weapons Package"
-                  />
-                </div>
-              </div>
-              <div class="div2">
-                <div class="author-info inlined">
-                  <p class="name-paragraphs">Author</p>
-                  <input
-                    type="text"
-                    name="author-name"
-                    class="github-info-inputs"
-                    placeholder="Author Name"
-                  />
-                </div>
-              </div>
-              <div class="div3">
-                <div class="github-name inlined">
-                  <p class="name-paragraphs">GitHub</p>
-                  <input
-                    type="text"
-                    name="github-name"
-                    class="github-info-inputs"
-                    placeholder="Github Username"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-      <button type="submit" class="project-save-button">
-        <i class="fa fa-save"></i>
-      </button>
+<div class="project-structure">
+  <div class="project-content scroller">
+    <div class="box-content first-box-content">
+      <h3 class="project-title">Eagle Carbine</h3>
+      <img src="/rimworld-toolkit-stable/icon.png" class="box-icon" alt="" />
+
+      <div class="content-data scroller">
+        <label
+          >Weapon Name
+          <input type="text" class="project-inputs" />
+        </label>
+
+        <label
+          >Weapon Damage
+          <input type="text" class="project-inputs" />
+        </label>
+
+        <label
+          >Weapon Range
+          <input type="text" class="project-inputs" />
+        </label>
+      </div>
     </div>
+
+    <div class="invisible-box-content"></div>
   </div>
+  <button type="submit" class="project-save-button">
+    <i class="fa fa-save"></i>
+  </button>
+  <button class="project-plus-button">
+    <i class="fa fa-plus"></i>
+  </button>
 </div>
 {% endblock %}

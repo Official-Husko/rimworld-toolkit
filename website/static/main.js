@@ -39,3 +39,35 @@ boxBtn.forEach((boxes) => {
     box.classList.toggle("border-color");
   });
 });
+
+// Project Page
+
+const addMoreButton = document
+  .querySelector(".project-plus-button")
+  .addEventListener("click", () => {
+    document.querySelector(
+      ".project-content"
+    ).innerHTML += `    <div class="box-content">
+    <h3 class="project-title">Eagle Carbine</h3>
+    <img src="/rimworld-toolkit-stable/icon.png" class="box-icon" alt="" />
+
+    <div class="content-data">
+      <label
+        >Weapon Name
+        <input type="text" class="project-inputs" />
+      </label>
+
+      <label
+        >Weapon Damage
+        <input type="text" class="project-inputs" />
+      </label>
+
+      <label
+        >Weapon Range
+        <input type="text" class="project-inputs" />
+      </label>
+    </div>
+  </div>
+  
+  <div class="invisible-box-content"></div>`;
+  });
