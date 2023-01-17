@@ -1,0 +1,14 @@
+{
+    "ModMetaData": {
+        "name": null,
+        "author": null,
+        "url": null,
+        "supportedVersions": null,
+        "packageId": null,
+        "description": null,
+        "modDependencies": null,
+        "incompatibleWith": null,
+        "loadBefore": null,
+        "loadAfter": null
+    }
+}

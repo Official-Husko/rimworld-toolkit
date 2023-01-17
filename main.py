@@ -1,7 +1,5 @@
 from website import create_app
-from webbrowser import open as openWebsite
 
-openWebsite("http://127.0.0.1:6969")
 app = create_app()
 
 if __name__ == "__main__":

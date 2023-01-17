@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>{STRING.PROJECT_NAME}</name>
-	<author>{STRING.AUTHOR}</author>
-	<url>{STRING.GITHUB}</url>
+	<name></name>
+	<author></author>
+	<url></url>
 	<supportedVersions>
-		{LIST.SUPPORTED_VERSIONS}
 	</supportedVersions>
-	<packageId>{STRING.PACKAGE_ID}</packageId>
-	<description>{STRING.DESCRIPTION}</description>
+	<packageId></packageId>
+	<description></description>
 	<modDependencies>
-		{LIST.MOD_DEPENDENCIES}
 	</modDependencies>
 	<incompatibleWith>
-		{EXT.INCOMPATIBLE}
 	</incompatibleWith>
 	<loadBefore>
-		{LIST.LOAD_BEFORE_LIST}
 	</loadBefore>
 	<loadAfter>
-		{LIST.LOAD_AFTER_LIST}
 	</loadAfter>
 </ModMetaData>

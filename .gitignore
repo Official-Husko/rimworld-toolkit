@@ -4,3 +4,6 @@ website/__pycache__/logger.cpython-310.pyc
 website/__pycache__/views.cpython-310.pyc
 Other Source Files/concept.ai
 Other Source Files/icon.ai
+api_keys.json
+__pycache__
+.env

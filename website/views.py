@@ -17,15 +17,14 @@ def blank():
             session["settings"] = user_settings
             
         try:
-            with open(f"data/languages/{session['language']}.json") as language:
+            with open(f"data/languages/{session['settings']['language']}.json") as language:
                 language_strings = json.load(language)
                 session["language_str"] = language_strings
-                # TODO: Merge english and foreign languages incase of missing translation
+                # TODO: Merge english and foreign languages incase of missing translation OR prepare the data in the backend to avoid these issues
         except:
-            with open(f"data/languages/en.json") as language:
+            with open(f"data/languages/en-us.json") as language:
                 language_strings = json.load(language)
                 session["language_str"] = language_strings
-                # TODO: Merge english and foreign languages incase of missing translation
         return redirect(url_for("views.welcome"))
     else:
         return redirect(url_for("views.setup"))
@@ -39,12 +38,13 @@ def setup():
             "versions": data["target-versions"].translate(str.maketrans({"'": "", " ": ""})).split(","),
             "default_author": data["default-author"],
             "default_author_short": data["default-author-short-form"],
-            "language": data["language"],
+            "language": data["language"].lower(),
             "default_github": data["default-github-username"]
         }
         settings = open("settings.json", "w")
         json.dump(data_example, settings, indent=6)
-        return redirect(url_for("views.welcome"))
+        sleep(1.5)
+        return redirect(url_for("views.blank"))
     
     return render_template("setup.html")
 
